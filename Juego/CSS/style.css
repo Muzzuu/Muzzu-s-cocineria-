@@ -1,0 +1,160 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../img/Fondo.png") no-repeat center center/cover;
+  background-color: #b2b2b2;
+  font-family: 'Edu TAS Beginner', cursive;
+  color: white;
+  overflow: hidden;
+}
+
+#menu {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 99; 
+  
+}
+
+
+
+.boton {
+  cursor: pointer;
+  position: relative;
+  padding: 1px 20px;
+  background: #FFCFF0;
+  font-size: 45px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 1s;
+  &:after,
+  &:before {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border: 0px solid #000000;
+    transition: all 1s;
+  }
+  &:after {
+    top: -1px;
+    left: -1px;
+    border-top: 5px solid black;
+    border-left: 5px solid black;
+  }
+  &:before {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+  }
+  &:hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background: rgba(0, 0, 0, .5);
+    color: white;
+    &:before,
+    &:after {
+      width: 100%;
+      height: 100%;
+      border-color: white;
+    }
+  }
+}
+
+.boton-container {
+  margin: 0px 0; /* Espacio vertical entre los botones */
+  text-align: center;
+}
+
+.data-container {
+  background: #ffebee;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Para que los botones estén uno debajo del otro */
+  justify-content: center;
+  align-items: center;
+}
+
+
+#game-board {
+  width: 1200px;
+  height: 98vh;
+  margin: auto;
+  position: relative;
+}
+
+#score-text {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  font-size: 2rem;
+}
+
+.Ingrediente {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: url("../img/aceite.png") no-repeat center center/cover;
+}
+
+.Ingrediente-20 {
+  background-image: url("../img/azucar.png") ;
+}
+
+.Ingrediente-50 {
+  background-image: url("../img/harina.png");
+}
+
+
+/* Pj */
+
+#main-character {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+}
+
+
+#main-character #player {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  background: url("../img/pj.png") no-repeat center center/cover;
+}
+
+
+#game-over-alert {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
+  position: absolute;
+  width: max-content;
+}
+
+#game-over-alert a {
+  color: #ffffff;
+  font-size: 2rem;
+}
+#game-over-alert h1 {
+  margin: 1rem;
+  font-size: 3rem;
+}

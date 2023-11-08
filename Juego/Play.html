@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+  <link rel="stylesheet" href="CSS/style.css" />
+  <title>Muzzus's cocineria</title>
+</head>
+
+<body>
+    
+  <div id="menu">
+    <div >
+      <a href="javascript:void(0)" class="boton" id="Facil"
+      onclick="startGame()">Nivel: Facil</a>   
+    </div>
+
+    <div>
+      <a href="javascript:void(0)" class="boton" id="Medio"
+      onclick="startGame()">Nivel: Medio</a> 
+    </div>
+
+    <DIv>
+      <a href="javascript:void(0)" class="boton" id="Extremo"
+      onclick="startGame()">Nivel: Extremo</a> 
+    </DIv>
+    
+      
+  </div>
+
+  <div id="game-board">
+    <div id="game-over-alert">
+      <h1>! PERDISTE !</h1>
+      <a href="index.html">JUGAR DE NUEVO</a>
+    </div>
+
+    <div id="main-character">
+      <div id="player"></div>
+    </div>
+  </div>
+
+  <script src="Juego.js"></script>
+</body>
+
+</html>
